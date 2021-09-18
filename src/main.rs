@@ -1,4 +1,5 @@
 use std::io::{self, BufRead};
+use std::time::{SystemTime, UNIX_EPOCH};
 
 #[derive(Debug)]
 struct IdWorker {
@@ -90,13 +91,19 @@ impl IdWorker {
     }
 }
 
-fn current_time_millis() {
-    (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
+fn current_time_millis() -> i64 {
+    let start = SystemTime::now();
+    let since_the_epoch = start
+        .duration_since(UNIX_EPOCH)
+        .expect("Time went backwards");
+    let ms = since_the_epoch.as_secs() as i64 * 1000i64
+        + (since_the_epoch.subsec_nanos() as f64 / 1_000_000.0) as i64;
+    ms
 }
 
 fn main() {
     let idworker = IdWorker::new(6, 10);
     //s1 = &String::from("asdf hgdfhdfg");
     idworker.max_worker_id();
-    println!("s1的值是:{:?}", &idworker.max_worker_id());
+    println!("当前时间戳:{:?}", current_time_millis());
 }
