@@ -1,0 +1,11 @@
+[package]
+name = "snowflake"
+version = "0.1.0"
+edition = "2018"
+authors = ["choby@outlook.com"]
+description = "SnowFlake is an algorithm adopted by Twitter, whose purpose is to generate globally unique and trend-increasing IDs in a distributed system."
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
