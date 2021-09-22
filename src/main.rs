@@ -1,4 +1,4 @@
-use snowflake::Snowflake;
+use snowflake_id::Snowflake;
 
 fn main() {
     let mut idworker = Snowflake::new(6, 10);
