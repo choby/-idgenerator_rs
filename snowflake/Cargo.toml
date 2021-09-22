@@ -1,10 +1,15 @@
 [package]
 name = "snowflake_id"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2018"
 authors = ["choby@outlook.com"]
+
 description = "SnowFlake is an algorithm adopted by Twitter, whose purpose is to generate globally unique and trend-increasing IDs in a distributed system."
 license = "MIT OR Apache-2.0"
+
+repository = "https://github.com/choby/idgenerator_rs"
+homepage = "https://github.com/choby/idgenerator_rs"
+documentation = "https://github.com/choby/idgenerator_rs/blob/main/snowflake/readme.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
